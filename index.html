@@ -1,174 +1,194 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhinav Singh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinav Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">AS. <span>Abhinav Singh</span></a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="brand-mark">A</span> Abhinav Kumar</a>
 
-            <button id="menu-btn" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-            <ul id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☼</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
 
-    <main>
-        <!-- HOME -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">ASPIRING SOFTWARE DEVELOPER</p>
-                <p class="intro">Hi, I'm</p>
+<main class="container" id="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">✦ B.Tech CSE (AI) · Student Developer</div>
+      <h1>Building ideas<br>into <span>reality.</span></h1>
+      <p class="lead">
+        I'm Abhinav Kumar, an aspiring software developer passionate
+        about programming, Artificial Intelligence and creating useful
+        digital experiences. I'm learning new skills and building my
+        future one step at a time.
+      </p>
+      <div class="hero-buttons">
+        <a class="button primary" href="#projects">Explore Projects ↘</a>
+        <a class="button" href="#contact">Get in Touch ↗</a>
+      </div>
+      <div class="gold-line"></div>
+    </div>
 
-                <h1>Abhinav <span>Singh.</span></h1>
+    <div class="identity-card">
+      <div class="monogram">AK</div>
+      <h2>Abhinav Kumar</h2>
+      <p>B.Tech CSE (AI)</p>
+      <div class="pills">
+        <span class="pill">HTML</span>
+        <span class="pill">CSS</span>
+        <span class="pill">Python</span>
+      </div>
+    </div>
+  </section>
 
-                <h2>I build ideas with technology.</h2>
+  <section id="about">
+    <div class="section-head">
+      <div class="kicker">Get to know me</div>
+      <h2 class="section-title">About / Bio</h2>
+      <p class="section-desc">My interests, learning journey and goals.</p>
+    </div>
 
-                <p class="description">
-                    I'm an aspiring software developer passionate about
-                    programming, Artificial Intelligence and creating
-                    useful digital experiences. I'm learning new skills
-                    and building my future one step at a time.
-                </p>
+    <div class="two-col">
+      <article class="card">
+        <div class="icon-box">✦</div>
+        <h3>Hello, I'm Abhinav.</h3>
+        <p>
+          I'm an aspiring software developer passionate about programming,
+          Artificial Intelligence and creating useful digital experiences.
+          I'm learning new skills and building my future one step at a time.
+        </p>
+      </article>
 
-                <div class="buttons">
-                    <a href="#about" class="btn">Explore My Portfolio ↗</a>
-                    <a href="#connect" class="text-btn">Contact Me</a>
-                </div>
+      <article class="card">
+        <h3>Quick Details</h3>
+        <div class="detail-list">
+          <div class="detail-row"><strong>Full Name</strong><span>Abhinav Kumar</span></div>
+          <div class="detail-row"><strong>Academic Focus</strong><span>Computer Science & AI</span></div>
+          <div class="detail-row"><strong>Interests</strong><span>Programming, AI, digital experiences</span></div>
+          <div class="detail-row"><strong>Goal</strong><span>Learn, practice and build</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
-                <div class="socials">
-                    <a href="https://github.com/abhinavsinghabhi24-bit"
-                       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  <section id="skills">
+    <div class="section-head">
+      <div class="kicker">My Toolkit</div>
+      <h2 class="section-title">Skills</h2>
+      <p class="section-desc">Technologies I'm learning and working with.</p>
+    </div>
 
-                    <a href="https://www.linkedin.com/in/abhinav-singh-8b6098409"
-                       target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                </div>
-            </div>
+    <div class="grid">
+      <article class="card skill-card">
+        <div class="icon-box">&lt;/&gt;</div>
+        <h3>HTML</h3>
+        <p>Creating the structure and content of web pages.</p>
+        <div class="tags"><span class="tag">HTML</span></div>
+      </article>
 
-            <div class="hero-image">
-                <img
-                    src="https://kommodo.ai/i/ceT3ovsCfgUPoZkclChX"
-                    alt="Abhinav Singh cartoon profile photo"
-                    onerror="this.style.display='none'; document.getElementById('photo-error').style.display='block';">
+      <article class="card skill-card">
+        <div class="icon-box">▧</div>
+        <h3>CSS</h3>
+        <p>Styling layouts and improving the visual experience.</p>
+        <div class="tags"><span class="tag">CSS</span></div>
+      </article>
 
-                <p id="photo-error" style="display:none;">
-                    Photo could not load. Check the image URL.
-                </p>
+      <article class="card skill-card">
+        <div class="icon-box">Py</div>
+        <h3>Python</h3>
+        <p>Developing programming fundamentals and problem-solving skills.</p>
+        <div class="tags"><span class="tag">Python</span></div>
+      </article>
+    </div>
+  </section>
 
-                <div class="image-caption">LEARN · BUILD · GROW</div>
-            </div>
-        </section>
+  <section id="education">
+    <div class="section-head">
+      <div class="kicker">My Learning Journey</div>
+      <h2 class="section-title">Education</h2>
+      <p class="section-desc">My current academic program.</p>
+    </div>
 
-        <!-- ABOUT -->
-        <section id="about" class="section about">
-            <p class="eyebrow">GET TO KNOW ME</p>
-            <h2>About <span>Me.</span></h2>
+    <article class="card">
+      <div class="education-top">
+        <div class="icon-box">▤</div>
+        <span class="badge">2026 · 1st Semester</span>
+      </div>
+      <h3>Geeta University</h3>
+      <p>Bachelor of Technology in Computer Science Engineering (AI)</p>
+      <div class="detail-list">
+        <div class="detail-row"><strong>Institution</strong><span>Geeta University</span></div>
+        <div class="detail-row"><strong>Course</strong><span>B.Tech CSE (AI)</span></div>
+        <div class="detail-row"><strong>Year</strong><span>2026</span></div>
+        <div class="detail-row"><strong>Semester</strong><span>1st Semester</span></div>
+      </div>
+    </article>
+  </section>
 
-            <p>
-                I'm Abhinav Singh, an aspiring software developer.
-                I enjoy exploring technology, learning programming
-                and understanding how websites and applications work.
-                My goal is to become a skilled software developer
-                and create projects that solve real-world problems.
-            </p>
-        </section>
+  <section id="projects">
+    <div class="section-head">
+      <div class="kicker">Work in Progress</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-desc">My projects will appear here as they're ready.</p>
+    </div>
 
-        <!-- EDUCATION -->
-        <section id="education" class="section">
-            <p class="eyebrow">MY LEARNING JOURNEY</p>
-            <h2>Education.</h2>
+    <article class="card">
+      <div class="project-top">
+        <div class="icon-box">✧</div>
+        <span class="badge">Coming Soon</span>
+      </div>
+      <h3>My first projects are on the way</h3>
+      <p>
+        I'm strengthening my foundations in HTML, CSS and Python.
+        This section will feature real projects, technologies used,
+        GitHub repositories and live demos when available.
+      </p>
+    </article>
+  </section>
 
-            <div class="card">
-                <h3>Bachelor of Technology (B.Tech)</h3>
-                <p>Computer Science and Engineering</p>
-                <p class="muted">
-                    Currently learning programming and software
-                    development fundamentals.
-                </p>
-            </div>
-        </section>
+  <section id="contact">
+    <div class="contact-panel">
+      <div>
+        <div class="kicker">Let's Connect</div>
+        <h2 class="section-title">Have a conversation.</h2>
+        <p>Reach out for learning opportunities or collaboration.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:abhinavsinghabhi24@gmail.com">Email Me ↗</a>
+        <a class="button" href="https://www.linkedin.com/in/abhinav-singh-8b6098409" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <!-- SKILLS -->
-        <section id="skills" class="section">
-            <p class="eyebrow">WHAT I'M LEARNING</p>
-            <h2>My <span>Skills.</span></h2>
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Abhinav Kumar. All rights reserved.</span>
+    <div class="social-links">
+      <a href="https://github.com/abhinavsinghabhi24-bit" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/abhinav-singh-8b6098409" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="mailto:abhinavsinghabhi24@gmail.com">Email ↗</a>
+    </div>
+  </div>
+</footer>
 
-            <div class="skills-grid">
-                <div class="card">
-                    <h3>HTML</h3>
-                    <p>Beginner</p>
-                </div>
-
-                <div class="card">
-                    <h3>CSS</h3>
-                    <p>Beginner</p>
-                </div>
-
-                <div class="card">
-                    <h3>JavaScript</h3>
-                    <p>Learning</p>
-                </div>
-
-                <div class="card">
-                    <h3>Python</h3>
-                    <p>Learning</p>
-                </div>
-
-                <div class="card">
-                    <h3>GitHub</h3>
-                    <p>Learning</p>
-                </div>
-
-                <div class="card">
-                    <h3>Generative AI</h3>
-                    <p>Exploring</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="connect" class="section contact">
-            <p class="eyebrow">LET'S CONNECT</p>
-            <h2>Have an idea? <span>Let's talk.</span></h2>
-
-            <p>
-                I'm always interested in learning, collaborating
-                and connecting with people in technology.
-            </p>
-
-            <div class="contact-links">
-                <a href="tel:+916202083406">📞 6202083406</a>
-
-                <a href="https://www.linkedin.com/in/abhinav-singh-8b6098409"
-                   target="_blank" rel="noopener noreferrer">
-                    LinkedIn Profile ↗
-                </a>
-
-                <a href="https://github.com/abhinavsinghabhi24-bit"
-                   target="_blank" rel="noopener noreferrer">
-                    GitHub Profile ↗
-                </a>
-
-                <a href="mailto:">Email Me</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© <span id="year"></span> Abhinav Singh. Built with HTML, CSS & JavaScript.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
