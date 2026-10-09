@@ -1,22 +1,41 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
 
-// Mobile menu
-menuBtn.addEventListener("click", function () {
-    navLinks.classList.toggle("open");
+const root = document.documentElement;
 
-    menuBtn.textContent = navLinks.classList.contains("open")
-        ? "✕"
-        : "☰";
+const themeToggle = document.getElementById("themeToggle");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+// Dark / Light Mode
+themeToggle.addEventListener("click", () => {
+  const isLight = root.getAttribute("data-theme") !== "light";
+
+  root.setAttribute("data-theme", isLight ? "light" : "dark");
+
+  themeToggle.textContent = isLight ? "☾" : "☼";
+
+  themeToggle.setAttribute(
+    "aria-label",
+    isLight ? "Switch to dark mode" : "Switch to light mode"
+  );
 });
 
-// Close menu after clicking a link
-document.querySelectorAll("#nav-links a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        menuBtn.textContent = "☰";
-    });
+// Mobile Navigation Menu
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
 });
 
-// Update footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+// Close menu after clicking a navigation link
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// Automatically update copyright year
+document.getElementById("year").textContent =
+  new Date().getFullYear();
